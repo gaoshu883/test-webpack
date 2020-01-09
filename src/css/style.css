@@ -7,5 +7,30 @@
   align-items: center;
   justify-content: center;
   font-family: 'Zhi Mang Xing', cursive;
-  font-size: 300px;
+  font-size: 40vh;
+}
+.main h1 {
+  position: relative;
+  font-weight: 400;
+  color: transparent;
+}
+.main h1::before,
+.main h1::after {
+  position: absolute;
+  content: attr(data-text);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.main h1::before {
+  color: black;
+  z-index: 2;
+}
+.main h1::after {
+  background-image: linear-gradient(#fbfbfb 40%, #ff7a39 80%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 8px transparent;
+  z-index: 1;
 }
